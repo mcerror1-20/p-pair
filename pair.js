@@ -65,9 +65,8 @@ router.get('/', async (req, res) => {
 
                         const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${randomMegaId()}.json`);
 
-                        const string_session = mega_url.replace('https://mega.nz/file/', ''
-                                                                
-                        );
+                        const string_session = mega_url.replace('https://mega.nz/file/', '');
+
                         const sid = string_session;
 
                         const dt = await PrabathPairWeb.sendMessage(user_jid, {
