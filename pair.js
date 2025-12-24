@@ -65,7 +65,14 @@ router.get('/', async (req, res) => {
 
                         const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${randomMegaId()}.json`);
 
-                        const string_session = mega_url.replace('https://mega.nz/file/', '');
+                        const string_session = mega_url.replace('https://mega.nz/file/', ''
+                                                                
+                        );
+                        const sid = `*MC ERROR [The powerful WA BOT]*\n\n👉 ${string_session} 👈\n\n*This is the your Session ID, copy this id and paste into config.js file*\n\n*You can ask any question using this link*\n\n*https://wa.me/94722815617*\n\n*You can join my whatsapp group*\n\n*https://chat.whatsapp.com/H9svOgKRCK59cWYljbWpmK*`;
+            const mg = `🛑 *Do not share this code to anyone* 🛑`;
+            const dt = await RobinPairWeb.sendMessage(user_jid, {
+              image: {
+                url: "https://github.com/mcerror1-20/github/blob/main/MC%20Error%20logo.jpg",
 
                         const sid = string_session;
 
